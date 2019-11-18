@@ -32,8 +32,8 @@ export class Config {
 
   setToDefault(): void {
     this.webonly = false;
-    this.title = 'Hyperledger Composer';
-    this.banner = ['Hyperledger', 'Composer Playground'];
+    this.title = 'Avantica Acknowledgments Program';
+    this.banner = ['Avantica', 'Acknowledgments Program'];
     this.docURL = 'https://hyperledger.github.io/composer/latest';
     this.links = {
       docs: <string> 'https://hyperledger.github.io/composer/latest/introduction/introduction.html',
@@ -41,7 +41,7 @@ export class Config {
       community: <string> 'https://hyperledger.github.io/composer/latest/support/support-index.html',
       github: <string> 'https://github.com/hyperledger/composer',
       install: <string> 'https://hyperledger.github.io/composer/latest/installing/installing-index.html',
-      legal: <string> 'https://www.apache.org/licenses/LICENSE-2.0'
+      avantica: <string> 'https://www.avantica.net/'
     };
     this.analyticsID = null;
   }

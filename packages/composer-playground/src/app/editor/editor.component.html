@@ -76,7 +76,7 @@
             <span class="semver-label">From:</span>
             <span class="semver-value"><span class="semver">{{deployedPackageVersion}}</span></span>
         </div>
-    
+
         <div class="busnet-version" *ngIf="!invalidPackage" [class.error]="invalidAboutFileIDs && invalidAboutFileIDs.length > 0">
             <span class="semver-label">To:</span>
             <span *ngIf="!editVersionActive" class="semver-value">
@@ -184,7 +184,6 @@
                 </div>
             </div>
         </div>
-
         <div class="flex">
             <editor-file (packageJsonVersionChange)="editorFileVersionChange($event)" [editorFile]="currentFile" [previewReadmeActive]="previewReadme"></editor-file>
         </div>
