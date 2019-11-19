@@ -21,12 +21,12 @@
                 <ul *ngIf="showHeaderLinks" class="links navleft">
                     <li>
                         <button id='app_definebutton' class="action" [routerLink]="['editor']"
-                                [routerLinkActive]="['active']">Define
+                                [routerLinkActive]="['active']">Create New Network
                         </button>
                     </li>
                     <li>
                         <button id='app_testbutton' class="action" [routerLink]="['test']"
-                                [routerLinkActive]="['active']">Test
+                                [routerLinkActive]="['active']">Create Acknowledgment
                         </button>
                     </li>
                 </ul>
@@ -50,7 +50,7 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <button id="content" class="dropdown-item action" [routerLink]="['identity']">
                                     <div class="flex-container flex" style="justify-content:space-between">
-                                        <div style="margin-right:10px">ID Registry</div>
+                                        <div style="margin-right:10px">Change User</div>
                                     </div>
                                 </button>
                                 <button id="footer" class="dropdown-item action" (click)="logout()">
@@ -58,7 +58,7 @@
                                         <div style="margin-right:20px"><svg class="ibm-icon" aria-hidden="true">
                                             <use xlink:href="#icon-chevron-left"></use>§
                                         </svg></div>
-                                        <div>Acknowledgments Network</div>
+                                        <div>Exit</div>
                                     </div>
                                 </button>
                             </div>

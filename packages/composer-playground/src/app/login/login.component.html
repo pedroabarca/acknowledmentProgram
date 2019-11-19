@@ -12,27 +12,31 @@
  limitations under the License.
 -->
 <section *ngIf="!showSubScreen" class="header">
-    <h1>My Business Networks</h1>
-    <div *ngIf="!showSubScreen">
-        <button id="importIdCard" *ngIf="usingLocally" type="button" class="secondary" (click)="importIdentity()">
-            <span>Import Business Network Card</span>
-        </button>
-        <button id="createIdCard" *ngIf="usingLocally" type="button" class="secondary" (click)="goCreateCard()">
-            <span>Create Business Network Card</span>
-        </button>
-    </div>
+    <h1>The Avantica's Blockchain</h1>
 </section>
 <section *ngIf="!showSubScreen" class="main-view">
     <div class="connection-profile" *ngFor="let connectionProfileRef of connectionProfileRefs;">
-        <span class="connection-profile-title">
-            <h2>Connection: {{connectionProfileRef === 'web-$default' ? 'Web Browser' : this.connectionProfileNames.get(connectionProfileRef) }}</h2>
-        </span>
         <div class="identities">
-            <identity-card *ngIf="configService.isWebOnly() && connectionProfileRef === 'web-$default' && idCards.size === indestructibleCards.length"
-                           (onDeploySample)="deploySample(connectionProfileRef)"
-                           [link]="config.links.tutorial"
-                           [showSpecial]="true">
-            </identity-card>
+            <div class="connection-profile-card">
+                <p>Avantica has a recognition system for the employees whose management is completely manual
+                    called the Costa Rica Recognition Program. This introduces the possibility of points accounting errors,
+                    or even the omission of acknowledgments by managers or the collaborators themselves.
+                <p>On the other hand, there is no simple and self-service way for each employee to see their status
+                    (accumulated points) throughout the period. Additionally, there are no established controls for the
+                    inspection or assurance of recognition processes or points awarded to guarantee the reliability of
+                    the results in each period.
+                </p>
+                <p>So the previous problem leads us to the need to develop an application based on Blockchain technology
+                    which aims to cover and solve the problem in an effective way, for this, through a Smart Contract that
+                    will seek to cover all regulations or rules that each of the 2 recognition categories possesses, all
+                    of these, are within the policies already defined by the Costa Rica Recognition Program developed by Avantica.
+                </p>
+                <p>The projection of the tool is the development of a chain of blocks that allows a free, safe and honest
+                    transfer of acknowledgments (certificates to recognize the good work or attitude of a co-worker).
+                    The base of the network is blockchain, which gives us a degree of transfer and supervision that
+                    cannot be easily implemented in a centralized database.
+                </p>
+            </div>
             <identity-card *ngFor="let cardRef of idCardRefs.get(connectionProfileRef)"
                            [identity]="idCards.get(cardRef)"
                            [indestructible]="(indestructibleCards.indexOf(cardRef) > -1)"
@@ -41,44 +45,7 @@
                            (onExport)="exportIdentity(cardRef)"
                            (onDelete)="removeIdentity(cardRef)">
             </identity-card>
-            <button type="button" class="connection-profile-card"
-                    *ngIf="canDeploy(connectionProfileRef)"
-                    (click)="goDeploy(connectionProfileRef)">
-                <span class="card-content">
-                    <svg class="ibm-icon" aria-hidden="true">
-                        <use xlink:href="#icon-Network_Create"></use>
-                    </svg>
-                    <p>Deploy a new business network</p>
-                </span>
-            </button>
-            <div class="connection-profile-card card-content" *ngIf="!canDeploy(connectionProfileRef)">
-                <svg class="ibm-icon" aria-hidden="true">
-                    <use xlink:href="#icon-get-information_64"></use>
-                </svg>
-                <p>You must <a href="javascript:void(0);" (click)="importIdentity()">import</a> identity cards with the correct admin rights for deploying new business networks.</p>
-                <p><a href="{{ config.docURL }}/business-network/bnd-deploy.html" target="_blank">Learn more</a>.</p>
-            </div>
         </div>
-    </div>
-</section>
-<section class="sub-view" *ngIf="showSubScreen">
-    <div class="header">
-        <button type="button" class="action" (click)="goLoginMain()">
-            <svg class="ibm-icon vertical-top rotate" aria-hidden="true">
-                <use xlink:href="#icon-forward_16"></use>
-            </svg>
-            <span>My Wallet</span>
-        </button>
-        <tutorial-link [hidden]="config.links.tutorial === ''" [link]="config.links.tutorial" *ngIf="showDeployNetwork"></tutorial-link>
-    </div>
-    <div *ngIf="showDeployNetwork">
-        <deploy-business-network (finishedSampleImport)="finishedDeploying()" [showCredentials]="showCredentials"></deploy-business-network>
-    </div>
-    <div *ngIf="creatingIdCard">
-        <create-identity-card [connectionProfileRefs]="connectionProfileRefs"
-                              [connectionProfileNames]="connectionProfileNames"
-                              [connectionProfiles]="connectionProfiles"
-                              (finishedCardCreation)="finishedCardCreation($event)"></create-identity-card>
     </div>
 </section>
 <app-footer></app-footer>
