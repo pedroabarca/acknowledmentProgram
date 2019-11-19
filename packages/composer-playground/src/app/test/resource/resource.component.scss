@@ -29,6 +29,12 @@ resource-modal {
         .resource-preview-text {
             color: $secondary-text;
         }
+        .scrollbar-padding {
+            background-color: $primary-text;
+        }
+        .CodeMirror {
+            background-color: $primary-text;
+        }
 
         .resource-error-text {
             min-height: 30px;
@@ -53,13 +59,14 @@ resource-modal {
     }
 
     .CodeMirror {
-        font-family: Source Code Pro
+        font-family: Source Code Pro;
 
     }
 
     .CodeMirror, .CodeMirror-scroll {
         min-height: 300px;
         max-height: 300px;
+        background-color: $primary-text;
         // needed to get rid of the duplicate scroll bars, not sure why this works????
         min-width: 630px;
         max-width: 650px;

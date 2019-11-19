@@ -33,8 +33,9 @@ registry {
     }
 
     button.registry {
-        background-color: $white;
-        border-color: $white;
+        background-color: $tertiary-text;
+        border-color: $tertiary-text;
+        color: $third-highlight;
         box-shadow: 0 2px 5px -1px $fifth-highlight;
 
         &:hover {
