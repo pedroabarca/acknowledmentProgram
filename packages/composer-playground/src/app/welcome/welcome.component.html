@@ -20,15 +20,13 @@
     </button>
   </div>
   <section class="modal-body">
-    <h1>Welcome to {{ config.banner.join(' ') }}!</h1>
-    <svg class="splash-icon" aria-hidden="true">
-      <use xlink:href="#icon-WelcomeToPlayground"></use>
-    </svg>
+    <img [src]="imagePath" alt="logo">
+    <h1>Welcome to the Acknowledgments Program!</h1>
     <p>Create and sent acknowledgments to collaborators using the new {{ config.banner.join(' ') }} powered by the Blockchain.
     </p>
   </section>
   <footer>
-    <button id="welcome_start" type="button" class="primary centre" (click)="activeModal.close();">
+    <button id="welcome_start" type="button" class="primary centre button-thank" (click)="activeModal.close();">
       <span>Let's Thank!</span>
     </button>
   </footer>

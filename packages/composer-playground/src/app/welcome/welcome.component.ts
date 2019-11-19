@@ -25,6 +25,7 @@ import { Config } from './../services/config/configStructure.service';
 export class WelcomeComponent implements OnInit {
 
     private config = new Config();
+    imagePath:any = require("../../assets/img/avantica.png");
 
     constructor(public activeModal: NgbActiveModal, private configService: ConfigService) {
 

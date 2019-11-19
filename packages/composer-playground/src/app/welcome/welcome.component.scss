@@ -17,24 +17,32 @@
 
 welcome-modal {
   .welcome {
+      color: $third-highlight;
+      background-color: $secondary-text;
     .modal-header {
-      background-color: $white;
+      background-color: $secondary-text;
     }
 
     section.modal-body {
       align-items: center;
       text-align: center;
-
+      h1 {
+          color: $third-highlight;
+        }
       p {
         padding: 0 $space-xlarge;
       }
     }
 
     footer {
-      background-color: $white;
+      background-color: $secondary-text;
       justify-content: center;
       flex-direction: column;
       padding-bottom: $space-large;
+
+      .button-thank {
+          background-color: $tertiary-text;
+      }
 
       tutorial-link {
         margin-top: $space-large;

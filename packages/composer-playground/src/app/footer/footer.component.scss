@@ -34,18 +34,18 @@ app-footer {
         font-size: 12px;
         display: flex;
         height: 55px;
-        background-color: $first-highlight;
+        background-color: $tertiary-text;
 
         .footer-left, .footer-right{
             flex:1;
             display:flex;
-            color: $tertiary-text;
+            color: $third-highlight;
 
             .footer-item{
                 flex-shrink: 1;
                 padding-right:30px;
                 a {
-                    color: $tertiary-text;
+                    color: $third-highlight;
                     text-decoration: none;
 
                     &:hover {

@@ -13,7 +13,7 @@
 -->
 <div *ngIf="_registry" class="resource-header">
     <div class="resource-header-left">
-        <h1 *ngIf="!isHistorian()">{{_registry.name}}</h1>
+        <h1 *ngIf="!isHistorian()">{{_registry.registryType}}</h1>
     </div>
     <div *ngIf="!isHistorian()">
         <button type="button" class="registry" (click)="openNewResourceModal()">
@@ -38,9 +38,7 @@
                      class="data">{{serialize(resource)}}</pre>
                 <div lass="resource-icon">
                     <button type="button" class="icon edit-resource" (click)="editResource(resource)">
-                        <svg class="ibm-icon" aria-hidden="true">
-                            <use xlink:href="#icon-edit_32"></use>
-                        </svg>
+                        <img [src]="">
                     </button>
                 </div>
                 <div class="resource-icon">
@@ -80,9 +78,7 @@
     </table>
 
     <div *ngIf="!resources || resources.length === 0" class="no-resources">
-        <svg class="ibm-icon" aria-hidden="true">
-            <use xlink:href="#icon-Emptiness"></use>
-        </svg>
+        <img [src]="imagePath" alt="logo">
         <h3>This registry is empty!</h3>
         <p *ngIf="!isHistorian()">To create resources in this registry click create new at the
             top of

@@ -15,30 +15,14 @@
     <nav class="indexnav">
         <div class="navcontent">
             <div class="navlogo">
-                <p title="{{config.banner[0]}}"><b>{{ composerBanner[0] }}</b></p>&nbsp;<p id="network-name" title="{{config.banner[1]}}">{{ composerBanner[1] }}</p>
+                <p title="{{config.banner[0]}}"><b>Avantica</b></p>&nbsp;<p id="network-name" title="{{config.banner[1]}}">Acknowledgment Program</p>
             </div>
             <div class="navmain" [ngClass]="{'rightonly' : !showHeaderLinks && !usingLocally }">
                 <ul *ngIf="showHeaderLinks" class="links navleft">
                     <li>
-                        <button id='app_definebutton' class="action" [routerLink]="['editor']"
-                                [routerLinkActive]="['active']">Create New Network
-                        </button>
-                    </li>
-                    <li>
                         <button id='app_testbutton' class="action" [routerLink]="['test']"
                                 [routerLinkActive]="['active']">Create Acknowledgment
                         </button>
-                    </li>
-                </ul>
-                <ul *ngIf="!showHeaderLinks && !usingLocally" class="links navright">
-                    <li>
-                        <a href="{{ config.links.install }}"
-                           target="_blank">
-                            <svg class="nav-icon" aria-hidden="true">
-                                <use xlink:href="#icon-simple_docker"></use>
-                            </svg>
-                            <span>Get local version</span>
-                        </a>
                     </li>
                 </ul>
                 <div *ngIf="showHeaderLinks" class="drop-select navright" [routerLinkActive]="['active']" [ngClass]="{'dropListActive' : dropListActive}">

@@ -22,11 +22,17 @@
   /* Set the fixed height of the footer here */
   height: 32px;
   line-height: 32px; /* Vertically center the text there */
-  background-color: $sixth-highlight;
+  background-color: $first-highlight;
   text-align: center;
 }
 
 app {
+  div.navmain {
+      background-color: $secondary-text;
+  }
+  div.navlogo {
+        background-color: $tertiary-text;
+  }
   display: flex;
   flex-direction: column;
   height: 100vh;

@@ -32,6 +32,7 @@ import { DrawerDismissReasons } from '../../common/drawer';
 export class RegistryComponent {
 
     tableScrolled = false;
+    imagePath:any = require("../../../assets/img/avantica.png");
 
     private _registry = null;
     private _reload = null;

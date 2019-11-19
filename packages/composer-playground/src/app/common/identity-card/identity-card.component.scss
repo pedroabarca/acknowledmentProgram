@@ -18,12 +18,12 @@
 .composer {
     .identity-card {
         position: relative;
-        background-color: $white;
+        background-color: $first-highlight;
         box-shadow: 3px 6px 15px 0 rgba(0, 0, 0, 0.20);
         width: 275px;
 
         section, footer {
-            padding: 0 $space-large;
+            padding: 15 $space-large;
         }
 
         p {
@@ -33,7 +33,7 @@
         h3 {
             text-align: center;
             text-transform: uppercase;
-            color: $secondary-text;
+            color: $third-highlight;
             font-family: $font-stack;
             font-weight: 400;
             font-size: 0.9rem;
@@ -142,6 +142,7 @@
 
         .sample-section {
             text-align: center;
+            padding-bottom: 15px;
 
             .sample-icon {
                 padding-top: $space-medium;
@@ -155,7 +156,7 @@
         .actions {
             display: flex;
             justify-content: center;
-            padding-bottom: $space-smedium;
+            padding-bottom: 40px;
 
             button.delete {
                 border-color: transparent;
@@ -172,7 +173,7 @@
 
         .connection-profile-details, .business-network-details, .user-name-details {
             padding-top: $space-medium;
-            border-top: 1px solid $fourth-highlight;
+            color: $third-highlight;
 
             p {
                 text-overflow: ellipsis;
