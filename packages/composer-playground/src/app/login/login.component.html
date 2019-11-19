@@ -12,15 +12,7 @@
  limitations under the License.
 -->
 <section *ngIf="!showSubScreen" class="header">
-    <h1 class="title">The Avantica's Blockchain</h1>
-    <div *ngIf="!showSubScreen">
-        <button id="importIdCard" *ngIf="usingLocally" type="button" class="secondary" (click)="importIdentity()">
-            <span>Import Business Network Card</span>
-        </button>
-        <button id="createIdCard" *ngIf="usingLocally" type="button" class="secondary" (click)="goCreateCard()">
-            <span>Create Business Network Card</span>
-        </button>
-    </div>
+    <h1>The Avantica's Blockchain</h1>
 </section>
 <section *ngIf="!showSubScreen" class="main-view">
     <div class="connection-profile" *ngFor="let connectionProfileRef of connectionProfileRefs;">
